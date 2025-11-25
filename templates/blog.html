@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container py-4">
+  <div class="row g-4">
+    {% for media in medias %}
+      <div class="col-sm-6 col-md-4">
+        <div class="card h-100">
+          <div class="ratio ratio-4x3">
+            <img src="{{ media.image.url }}" class="img-fluid w-100 h-100" alt="{{ media.name }}" style="object-fit: cover;" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ media.name }}</h5>
+            <p class="card-text">{{ media.description }}</p>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <div class="col-12"><p>No media uploaded yet.</p></div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
