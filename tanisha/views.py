@@ -4,9 +4,6 @@ from addCourses.models import Courses
 from addInstructors.models import Instructors
 from contactApp.models import Contact
 from mediaApp.models import Media
-# from addCourses.models import Course
-# from addInstructors.models import Instructor
-# from testimonial.models import Testimonial
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from tanisha.settings import DEFAULT_FROM_EMAIL
@@ -30,7 +27,8 @@ def hello_message(request):
     testimonials = Testimonial.objects.all()
     return render(request, "index.html", {'courses': courses, 'instructors': instructors, 'testimonials': testimonials})
 def about(request):
-    return render(request, "about.html")  
+    instructors = Instructors.objects.all()
+    return render(request, "about.html",{'instructors': instructors})  
 def contact(request):
     if request.method == "POST":
         name = request.POST.get("name")
@@ -80,7 +78,8 @@ def courses(request):
 def team(request):
     return render(request, "team.html")
 def testimonial(request):
-    return render(request, "testimonial.html")  
+    testimonials = Testimonial.objects.all()
+    return render(request, "testimonial.html", {'testimonials': testimonials})  
 def error404(request):
     return render(request, "404.html")
 def blog(request):

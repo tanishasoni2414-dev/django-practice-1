@@ -1,6 +1,6 @@
 📘 Django Practice Repository – REST APIs, SMTP Email, Authentication & More
 
-REPO - Django-Practice-Repository-1
+REPO - Django-Practice-/1
 
 This repository is a complete Django practice project where you learn and implement real-world backend features such as:
 
