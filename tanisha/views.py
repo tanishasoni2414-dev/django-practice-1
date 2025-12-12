@@ -74,7 +74,8 @@ def contact(request):
 def courses(request):
     courses = Courses.objects.all()
     instructors = Instructors.objects.all()
-    return render(request, "courses.html", {'courses': courses, 'instructors': instructors})
+    testimonials = Testimonial.objects.all()
+    return render(request, "courses.html", {'courses': courses, 'instructors': instructors ,'testimonials': testimonials})
 def team(request):
     return render(request, "team.html")
 def testimonial(request):
