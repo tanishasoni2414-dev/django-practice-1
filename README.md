@@ -414,9 +414,6 @@ This is a learning project. Improve it, test new modules, and push updates freel
 📄 License
 This project is open-source under MIT License.
 
-📸 Screenshots (Optional)
-
-You can upload screenshots inside /screenshots/ and display them like:
 ## 📸 Screenshots
 ### Homepage  
 ![Homepage](static/img/screenshots/home.png)
